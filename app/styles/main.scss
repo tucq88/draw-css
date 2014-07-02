@@ -1,8 +1,9 @@
 // bower:scss
 // endbower
+$body-bg-color: #fafafa;
 
 body {
-    background: #fafafa;
+    background: $body-bg-color;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
@@ -28,4 +29,86 @@ body {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+
+//Draw Teracy Logo by CSS
+
+//Variables
+$logo-color : #7ab800;
+
+//Object
+#teracy {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    margin-top: 100px;
+
+    * {
+        position: absolute;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        .part-top {
+            width: 0;
+            height: 0;
+            border-left: 120px solid transparent;
+            border-right: 120px solid transparent;
+            border-bottom: 70px solid $logo-color;
+
+            .part-top-inner {
+                width: 0;
+                height: 0;
+                border-left: 120px solid transparent;
+                border-right: 120px solid transparent;
+                border-bottom: 30px solid $body-bg-color;
+                margin-left: -120px;
+                margin-top: 41px;
+            }
+        }
+
+        .part-side {
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-bottom: 120px solid $logo-color;
+        }
+
+        .part-left {
+            transform: rotate(40deg);
+            margin-top: 70px;
+            margin-left: -30px;
+
+            .part-left-inner {
+                width: 0;
+                height: 0;
+                border-left: 85px solid transparent;
+                border-right: 85px solid transparent;
+                border-bottom: 60px solid $body-bg-color;
+                margin-left: -85px;
+                margin-top: 61px;
+            }
+        }
+
+        .part-right {
+            transform: rotate(-40deg);
+            margin-top: 70px;
+            margin-left: 90px;
+
+            .part-right-inner {
+                width: 0;
+                height: 0;
+                border-left: 85px solid transparent;
+                border-right: 85px solid transparent;
+                border-bottom: 60px solid $body-bg-color;
+                margin-left: -85px;
+                margin-top: 61px;
+            }
+        }
+
+    }
 }
