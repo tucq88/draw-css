@@ -1,11 +1,35 @@
 // bower:scss
 // endbower
-$body-bg-color: #fafafa;
+$grid-color: rgba(0, 0, 0, 0.6);
+$grid-size: 30px;
+$body-bg-color: #fff;
+
+//Variables
+$x:100px;
+$part-size: 200px;
+$logo-color : #7ab800;
 
 body {
     background: $body-bg-color;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+}
+
+body {
+  background-image:
+    linear-gradient(0deg,
+      transparent 24%, $grid-color 25%, $grid-color 26%,
+      transparent 27%, transparent 74%,
+      $grid-color 75%,
+      $grid-color 76%,  transparent 77%, transparent),
+    linear-gradient(90deg,
+      transparent 24%, $grid-color 25%, $grid-color 26%,
+      transparent 27%, transparent 74%,
+      $grid-color 75%,
+      $grid-color 76%, transparent 77%, transparent
+  );
+  height:100%;
+  background-size: $grid-size $grid-size;
 }
 
 .hero-unit {
@@ -31,11 +55,7 @@ body {
     padding: 0.2em 0;
 }
 
-
 //Draw Teracy Logo by CSS
-
-//Variables
-$logo-color : #7ab800;
 
 //Object
 #teracy {
